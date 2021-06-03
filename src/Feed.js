@@ -5,8 +5,9 @@ import ImageIcon from '@material-ui/icons/Image'
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
-import InputOption from "./InputOption.js"
-// import Post from "./Post.js"
+import InputOption from "./InputOption.js";
+import { posts } from "./dummyData.js";
+import Post from "./Post.js"
 // import { db } from './firebase';
 // import firebase from 'firebase';
 // import {useSelector} from 'react-redux'
@@ -59,18 +60,16 @@ function Feed() {
                 </div>
             </div>
             {/*post*/ }
-            {/* <FlipMove>
-            { posts.map(( {id, data : {name,description,message,photoUrl } }) => (
-                <Post 
-                    key={id}
-                    name={name}
-                    description={description}
-                    message={message}
-                    photoUrl={photoUrl}
-                />
-            ))}
-            </FlipMove> */}
-           </div>
+            <FlipMove>
+                {posts.map((p) => (
+            <Post key={p.id} post={p} />
+                    ))}
+            </FlipMove>
+                    {/* <div className="postCenter">
+          <span className="postText">{post?.desc}</span> */}
+          {/* <img className="postImg" src={post.photo} alt="" /> */}
+        </div>
+        //    </div>
     )
 }
 

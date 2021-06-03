@@ -25,7 +25,7 @@ function Widgets() {
                 <h2>LinkedIn News</h2>
                 <InfoIcon />
             </div>
-            {newArticle("papa react is back","top views - 90999")}
+            {newArticle("Web development","top views - 90999")}
             {newArticle("corona ","top views - 8455")}
         </div>
     )
